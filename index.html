@@ -39,12 +39,19 @@ window.onload = main;
       document.body.appendChild( renderer.domElement );
 
       const geometry = new THREE.BoxGeometry();
-      const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+      const material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
       const cube = new THREE.Mesh( geometry, material );
       scene.add( cube );
 
       camera.position.z = 5;
 
+      // create a point light
+      const pointLight = new THREE.PointLight(0xFFFFFF);
+      pointLight.position.x = 10;
+      pointLight.position.y = 50;
+      pointLight.position.z = 120;
+      scene.add(pointLight);
+      
       const animate = function () {
 	  requestAnimationFrame( animate );
 
