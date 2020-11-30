@@ -39,7 +39,7 @@ window.onload = main;
       document.body.appendChild( renderer.domElement );
 
       const geometry = new THREE.BoxGeometry();
-      for (var i = 0; i < geometry.faces.lengh; i++) {
+      for (var i = 0; i < geometry.faces.length; i++) {
 	  console.log("i:" + i);
 	  geometry.faces[i].color.setHex(Math.random() * 0xffffff);
       }
