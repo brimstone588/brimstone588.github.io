@@ -40,6 +40,7 @@ window.onload = main;
 
       const geometry = new THREE.BoxGeometry();
       for (var i = 0; i < geometry.faces.lengh; i++) {
+	  console.log("i:" + i);
 	  geometry.faces[i].color.setHex(Math.random() * 0xffffff);
       }
       const material = new THREE.MeshLambertMaterial( { color: 0xffffff, vertexColors:true } );
